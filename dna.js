@@ -29,12 +29,25 @@ function pairElement(str) {
 				paired.push(['C', 'G']);
 				break;
 		}
-      
 	};
-	for(var i = 0; i < str.length; i++) {
-	  search(str[i]);
+	for (var i = 0; i < str.length; i++) {
+		search(str[i]);
 	}
-  console.log(paired);
-  return paired;
+	console.log(paired);
+	return paired;
 }
 pairElement("GCG");
+
+// An advanced way below ---->
+
+function pairElement(str) {
+   var dnaMap = {C:'G', G:'C', T:'A', A:'T'};
+   var paired = [];
+  console.log(paired);
+  for (var i = 0; i < str.length; i++)
+    paired.push([str[i], dnaMap[str[i]]]);
+    console.log(paired);
+    return paired;
+}
+
+pairElement('GCG');
