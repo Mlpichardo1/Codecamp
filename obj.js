@@ -8,5 +8,4 @@ var Car = function(wheels, seats, engines) {
 };
 
 //Try it out here
-var myCar = new Car(3, 1, 2);
-
+var myCar = new Car(8, 4, 2)
