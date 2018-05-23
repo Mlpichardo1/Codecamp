@@ -1,16 +1,15 @@
 
-function addTogether() {
-  var numOne = arguments[0];
-  if (typeof(numOne) !== "number") {
-    return undefined;
-  }
-  if (arguments.length === 2) {
-    return typeof(arguments[1]) === "number" ? numOne + arguments[1] : undefined;
-  }
+function binaryAgent(str) {
+  // solve in single line
+var strArray = str.split(' ');
   
-  return function(){
-    return typeof(arguments[0]) === "number" ? numOne + arguments[0] : undefined;
-  };
+strArray =  strArray.map(function(binary){
+  return parseInt(binary, 2);
+});
+  
+  str = String.fromCharCode.apply(null, strArray);
+  return str;
+   
 }
 
-addTogether(2,3);
+binaryAgent("01000001 01110010 01100101 01101110 00100111 01110100 00100000 01100010 01101111 01101110 01100110 01101001 01110010 01100101 01110011 00100000 01100110 01110101 01101110 00100001 00111111");
